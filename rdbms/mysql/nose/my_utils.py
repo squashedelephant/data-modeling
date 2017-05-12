@@ -8,13 +8,14 @@ class FixtureError(Exception):
         self.msg
 
 class Fixture:
-    @classmethod
-    def _load(cls, test_type, sql_type):
-        dir = 'fixtures/datatype/'
-        path = {'ddl': '{}/{}.ddl'.format(dir, test_type),
-                'dml': '{}/{}.dml'.format(dir, test_type),
-                'dql': '{}/{}.dql'.format(dir, test_type),
-                'expected': '{}/{}.expected'.format(dir, test_type)}
+    def __init__(self, dir):
+        self.dir = dir
+
+    def _load(self, test_type, sql_type):
+        path = {'ddl': '{}/{}.ddl'.format(self.dir, test_type),
+                'dml': '{}/{}.dml'.format(self.dir, test_type),
+                'dql': '{}/{}.dql'.format(self.dir, test_type),
+                'expected': '{}/{}.expected'.format(self.dir, test_type)}
         if not exists(path[sql_type]):
             return (False,
                     FixtureError('ERROR: cannot load {}'.format(path[sql_type])))
@@ -32,18 +33,14 @@ class Fixture:
             return (False,
                     FixtureError('ERROR: cannot load {}'.format(path[sql_type])))
 
-    @classmethod
-    def load_schema(cls, test_type):
-        return cls._load(test_type, 'ddl')
+    def load_schema(self, test_type):
+        return self._load(test_type, 'ddl')
 
-    @classmethod
-    def populate(cls, test_type):
-        return cls._load(test_type, 'dml')
+    def populate(self, test_type):
+        return self._load(test_type, 'dml')
 
-    @classmethod
-    def test(cls, test_type):
-        return cls._load(test_type, 'dql')
+    def test(self, test_type):
+        return self._load(test_type, 'dql')
 
-    @classmethod
-    def expected(cls, test_type):
-        return cls._load(test_type, 'expected')
+    def expected(self, test_type):
+        return self._load(test_type, 'expected')
