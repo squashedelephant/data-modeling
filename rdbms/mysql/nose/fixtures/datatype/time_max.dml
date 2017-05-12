@@ -1,0 +1,1 @@
+INSERT INTO data(created) VALUES (TIME('23:59:59'));

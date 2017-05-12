@@ -1,0 +1,1 @@
+INSERT INTO data(money) VALUES(100.3333);

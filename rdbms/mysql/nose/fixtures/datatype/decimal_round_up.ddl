@@ -1,0 +1,1 @@
+CREATE TABLE data(money DECIMAL(5,2));
