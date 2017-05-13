@@ -1,0 +1,1 @@
+INSERT INTO data(created) VALUES (DATE('1000-01-01 00:00:00'));

@@ -1,0 +1,2 @@
+CREATE TABLE league(id INT NOT NULL AUTO_INCREMENT, name CHAR(15) NOT NULL, PRIMARY KEY (id));
+CREATE TABLE baseball(id INT NOT NULL AUTO_INCREMENT, league_id INT, team VARCHAR(30), city VARCHAR(30), state VARCHAR(2), PRIMARY KEY (id), INDEX league_idx (league_id), FOREIGN KEY (league_id) REFERENCES league(id) ON DELETE CASCADE);

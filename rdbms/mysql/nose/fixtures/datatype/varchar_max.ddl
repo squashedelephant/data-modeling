@@ -1,0 +1,1 @@
+CREATE TABLE data(page VARCHAR(65532));

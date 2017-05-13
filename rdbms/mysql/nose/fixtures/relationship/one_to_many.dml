@@ -1,0 +1,12 @@
+INSERT INTO users(name) VALUES ('Bill Gates');
+SET @user_id = LAST_INSERT_ID();
+INSERT INTO phone_numbers(user_id, phone_number) VALUES (@user_id, '425-555-1212');
+INSERT INTO phone_numbers(user_id, phone_number) VALUES (@user_id, '425-111-2222');
+INSERT INTO users(name) VALUES ('Steve Jobs');
+SET @user_id = LAST_INSERT_ID();
+INSERT INTO phone_numbers(user_id, phone_number) VALUES (@user_id, '408-555-1212');
+INSERT INTO phone_numbers(user_id, phone_number) VALUES (@user_id, '408-333-4444');
+INSERT INTO users(name) VALUES ('Larry Ellison');
+SET @user_id = LAST_INSERT_ID();
+INSERT INTO phone_numbers(user_id, phone_number) VALUES (@user_id, '650-555-1212');
+INSERT INTO phone_numbers(user_id, phone_number) VALUES (@user_id, '650-555-6666');

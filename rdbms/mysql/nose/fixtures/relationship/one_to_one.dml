@@ -1,0 +1,9 @@
+INSERT INTO color(name) VALUES('red');
+SET @color_id = LAST_INSERT_ID();
+INSERT INTO balloon (id, name, total) VALUES (@color_id, 'holiday', 3);
+INSERT INTO color(name) VALUES('pink');
+SET @color_id = LAST_INSERT_ID();
+INSERT INTO balloon (id, name, total) VALUES (@color_id, 'birthday', 1);
+INSERT INTO color(name) VALUES('blue');
+SET @color_id = LAST_INSERT_ID();
+INSERT INTO balloon (id, name, total) VALUES (@color_id, 'friendship', 5);

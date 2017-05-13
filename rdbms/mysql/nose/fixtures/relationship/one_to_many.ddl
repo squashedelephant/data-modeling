@@ -1,0 +1,2 @@
+CREATE TABLE users(id INT NOT NULL AUTO_INCREMENT, name CHAR(15) NOT NULL, PRIMARY KEY (id));
+CREATE TABLE phone_numbers(id INT NOT NULL AUTO_INCREMENT, user_id INT, phone_number VARCHAR(12), PRIMARY KEY (id), INDEX user_idx (user_id), FOREIGN KEY (user_id) REFERENCES users(id) ON DELETE CASCADE);

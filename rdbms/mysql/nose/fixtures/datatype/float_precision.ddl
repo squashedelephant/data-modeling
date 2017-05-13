@@ -1,0 +1,1 @@
+CREATE TABLE data(ppm FLOAT(6,3));
