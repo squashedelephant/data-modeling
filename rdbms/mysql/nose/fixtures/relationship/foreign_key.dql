@@ -1,0 +1,1 @@
+SELECT l.name, b.team, b.city, b.state FROM league AS l INNER JOIN baseball AS b WHERE l.id = b.league_id;

@@ -1,0 +1,1 @@
+SELECT b.name, c.name, b.total FROM balloon AS b INNER JOIN color AS c ON b.id = c.id;

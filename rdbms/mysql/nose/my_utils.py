@@ -1,11 +1,5 @@
 from os.path import exists
-
-class FixtureError(Exception):
-    def __init__(self, msg):
-        self.msg = msg
-
-    def __str__(self):
-        self.msg
+from sys import exit
 
 class Fixture:
     def __init__(self, dir):
@@ -15,10 +9,10 @@ class Fixture:
         path = {'ddl': '{}/{}.ddl'.format(self.dir, test_type),
                 'dml': '{}/{}.dml'.format(self.dir, test_type),
                 'dql': '{}/{}.dql'.format(self.dir, test_type),
-                'expected': '{}/{}.expected'.format(self.dir, test_type)}
+                'expected': '{}/{}.expected'.format(self.dir, test_type),
+                'clean': '{}/drop_schema.ddl'.format(self.dir)}
         if not exists(path[sql_type]):
-            return (False,
-                    FixtureError('ERROR: cannot load {}'.format(path[sql_type])))
+            exit('ERROR: cannot load {}'.format(path[sql_type]))
         try:
             f = open(path[sql_type], 'r')
             sql = []
@@ -44,3 +38,7 @@ class Fixture:
 
     def expected(self, test_type):
         return self._load(test_type, 'expected')
+
+    def drop_schema(self, test_type):
+        return self._load(test_type, 'clean')
+

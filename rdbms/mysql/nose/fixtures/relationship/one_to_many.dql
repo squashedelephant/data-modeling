@@ -1,0 +1,1 @@
+SELECT u.name, p.phone_number FROM users AS u INNER JOIN phone_numbers AS p ON u.id = p.user_id;

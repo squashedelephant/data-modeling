@@ -7,16 +7,16 @@ from _mysql_exceptions import DataError, OperationalError, ProgrammingError
 from unittest import TestCase
 
 from my_mysql import MyMySQL
-from my_utils import Fixture, FixtureError
+from my_utils import Fixture
 
 class TestMySQLDataType(TestCase):
     def setUp(self):
         self.m = MyMySQL()
-        self.f = Fixture('fixtures/datatype/')
+        self.f = Fixture('fixtures/datatype')
+        
 
     def tearDown(self):
-        self.stmt = 'DROP TABLE data;'
-        self.m.ddl(self.stmt)
+        self.m.ddl(self.f.drop_schema('datatype'))
         self.m = None
         self.f = None
 

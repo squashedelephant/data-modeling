@@ -1,0 +1,8 @@
+INSERT INTO league(name) VALUES('National League');
+SET @league_id = LAST_INSERT_ID();
+INSERT INTO baseball SET league_id = @league_id, team = 'San Francisco Giants', city = 'San Francisco', state = 'CA';
+INSERT INTO baseball SET league_id = @league_id, team = 'Los Angeles Dodgers', city = 'Los Angeles', state = 'CA';
+INSERT INTO league(name) VALUES('American League');
+SET @league_id = LAST_INSERT_ID();
+INSERT INTO baseball SET league_id = @league_id, team = 'New York Yankees', city = 'New York', state = 'NY';
+INSERT INTO baseball SET league_id = @league_id, team = 'Boston Red Sox', city = 'Boston', state = 'MA';

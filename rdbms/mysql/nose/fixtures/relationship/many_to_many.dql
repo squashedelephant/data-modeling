@@ -1,0 +1,1 @@
+SELECT e.first_name, e.last_name, d.name FROM employee AS e INNER JOIN dept AS d INNER JOIN employee_dept AS m ON e.id = m.emp_id AND d.id = m.dept_id;
