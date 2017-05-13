@@ -24,7 +24,7 @@ class TestMySQLRelationshipModel(TestCase):
         for stmt in self.f.load_schema(inputs):
             self.m.ddl(stmt)
         for stmt in self.f.populate(inputs):
-            self.m.ddl(stmt)
+            self.m.dml(stmt)
         actual_rows = self.m.dql(self.f.test(inputs))
         expected_rows = self.f.expected(inputs)
         for i in range(len(actual_rows)):
@@ -38,7 +38,7 @@ class TestMySQLRelationshipModel(TestCase):
         for stmt in self.f.load_schema(inputs):
             self.m.ddl(stmt)
         for stmt in self.f.populate(inputs):
-            self.m.ddl(stmt)
+            self.m.dml(stmt)
         actual_rows = self.m.dql(self.f.test(inputs))
         expected_rows = self.f.expected(inputs)
         for i in range(len(actual_rows)):
@@ -51,7 +51,7 @@ class TestMySQLRelationshipModel(TestCase):
         for stmt in self.f.load_schema(inputs):
             self.m.ddl(stmt)
         for stmt in self.f.populate(inputs):
-            self.m.ddl(stmt)
+            self.m.dml(stmt)
         actual_rows = self.m.dql(self.f.test(inputs))
         expected_rows = self.f.expected(inputs)
         for i in range(len(actual_rows)):
@@ -63,7 +63,7 @@ class TestMySQLRelationshipModel(TestCase):
         for stmt in self.f.load_schema(inputs):
             self.m.ddl(stmt)
         for stmt in self.f.populate(inputs):
-            self.m.ddl(stmt)
+            self.m.dml(stmt)
         actual_rows = self.m.dql(self.f.test(inputs))
         expected_rows = self.f.expected(inputs)
         for i in range(len(actual_rows)):
