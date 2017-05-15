@@ -1,0 +1,1 @@
+SELECT FLOOR(MAX(cost)) FROM data;

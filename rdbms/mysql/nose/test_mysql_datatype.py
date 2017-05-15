@@ -24,15 +24,17 @@ class TestMySQLDataType(TestCase):
         inputs = 'bit_min'
         self.m.ddl(self.f.load_schema(inputs))
         self.m.dml(self.f.populate(inputs))
+        actual = self.m.dql(self.f.test(inputs))
         self.assertEqual(int(self.f.expected(inputs)),
-                         int(b2a_hex(self.m.dql(self.f.test(inputs))), 16))
+                         int(b2a_hex(actual[0][0]), 16))
 
     def test_02_bit_max(self):
         inputs = 'bit_max'
         self.m.ddl(self.f.load_schema(inputs))
         self.m.dml(self.f.populate(inputs))
+        actual = self.m.dql(self.f.test(inputs))
         self.assertEqual(int(self.f.expected(inputs)),
-                         int(b2a_hex(self.m.dql(self.f.test(inputs))), 16))
+                         int(b2a_hex(actual[0][0]), 16))
 
     def test_03_bit_range_exceeded(self):
         inputs = 'bit_range_exceeded'
@@ -45,106 +47,121 @@ class TestMySQLDataType(TestCase):
         inputs = 'tinyint_signed_min'
         self.m.ddl(self.f.load_schema(inputs))
         self.m.dml(self.f.populate(inputs))
+        actual = self.m.dql(self.f.test(inputs))
         self.assertEqual(int(self.f.expected(inputs)),
-                         self.m.dql(self.f.test(inputs)))
+                         actual[0][0])
 
     def test_05_tinyint_signed_max(self):
         inputs = 'tinyint_signed_max'
         self.m.ddl(self.f.load_schema(inputs))
         self.m.dml(self.f.populate(inputs))
+        actual = self.m.dql(self.f.test(inputs))
         self.assertEqual(int(self.f.expected(inputs)),
-                         self.m.dql(self.f.test(inputs)))
+                         actual[0][0])
 
     def test_06_smallint_signed_min(self):
         inputs = 'smallint_signed_min'
         self.m.ddl(self.f.load_schema(inputs))
         self.m.dml(self.f.populate(inputs))
+        actual = self.m.dql(self.f.test(inputs))
         self.assertEqual(int(self.f.expected(inputs)),
-                         self.m.dql(self.f.test(inputs)))
+                         actual[0][0])
 
     def test_07_smallint_signed_max(self):
         inputs = 'smallint_signed_max'
         self.m.ddl(self.f.load_schema(inputs))
         self.m.dml(self.f.populate(inputs))
+        actual = self.m.dql(self.f.test(inputs))
         self.assertEqual(int(self.f.expected(inputs)),
-                         self.m.dql(self.f.test(inputs)))
+                         actual[0][0])
 
     def test_08_mediumint_signed_min(self):
         inputs = 'mediumint_signed_min'
         self.m.ddl(self.f.load_schema(inputs))
         self.m.dml(self.f.populate(inputs))
+        actual = self.m.dql(self.f.test(inputs))
         self.assertEqual(int(self.f.expected(inputs)),
-                         self.m.dql(self.f.test(inputs)))
+                         actual[0][0])
 
     def test_09_mediumint_signed_max(self):
         inputs = 'mediumint_signed_max'
         self.m.ddl(self.f.load_schema(inputs))
         self.m.dml(self.f.populate(inputs))
+        actual = self.m.dql(self.f.test(inputs))
         self.assertEqual(int(self.f.expected(inputs)),
-                         self.m.dql(self.f.test(inputs)))
+                         actual[0][0])
 
     def test_10_int_signed_min(self):
         inputs = 'int_signed_min'
         self.m.ddl(self.f.load_schema(inputs))
         self.m.dml(self.f.populate(inputs))
+        actual = self.m.dql(self.f.test(inputs))
         self.assertEqual(int(self.f.expected(inputs)),
-                         self.m.dql(self.f.test(inputs)))
+                         actual[0][0])
 
     def test_11_int_signed_max(self):
         inputs = 'int_signed_max'
         self.m.ddl(self.f.load_schema(inputs))
         self.m.dml(self.f.populate(inputs))
+        actual = self.m.dql(self.f.test(inputs))
         self.assertEqual(int(self.f.expected(inputs)),
-                         self.m.dql(self.f.test(inputs)))
+                         actual[0][0])
 
     def test_12_bigint_signed_min(self):
         inputs = 'bigint_signed_min'
         self.m.ddl(self.f.load_schema(inputs))
         self.m.dml(self.f.populate(inputs))
+        actual = self.m.dql(self.f.test(inputs))
         self.assertEqual(int(self.f.expected(inputs)),
-                         self.m.dql(self.f.test(inputs)))
+                         actual[0][0])
 
     def test_13_bigint_signed_max(self):
         inputs = 'bigint_signed_max'
         self.m.ddl(self.f.load_schema(inputs))
         self.m.dml(self.f.populate(inputs))
+        actual = self.m.dql(self.f.test(inputs))
         self.assertEqual(int(self.f.expected(inputs)),
-                         self.m.dql(self.f.test(inputs)))
+                         actual[0][0])
 
     def test_14_decimal_round_off(self):
         inputs = 'decimal_round_off'
         self.m.ddl(self.f.load_schema(inputs))
         self.m.dml(self.f.populate(inputs))
+        actual = self.m.dql(self.f.test(inputs))
         self.assertEqual(Decimal(self.f.expected(inputs)),
-                         self.m.dql(self.f.test(inputs)))
+                         actual[0][0])
 
     def test_15_decimal_round_up(self):
         inputs = 'decimal_round_up'
         self.m.ddl(self.f.load_schema(inputs))
         self.m.dml(self.f.populate(inputs))
+        actual = self.m.dql(self.f.test(inputs))
         self.assertEqual(Decimal(self.f.expected(inputs)),
-                         self.m.dql(self.f.test(inputs)))
+                         actual[0][0])
 
     def test_16_decimal_round_down(self):
         inputs = 'decimal_round_down'
         self.m.ddl(self.f.load_schema(inputs))
         self.m.dml(self.f.populate(inputs))
+        actual = self.m.dql(self.f.test(inputs))
         self.assertEqual(Decimal(self.f.expected(inputs)),
-                         self.m.dql(self.f.test(inputs)))
+                         actual[0][0])
 
     def test_17_float_round_off(self):
         inputs = 'float_round_off'
         self.m.ddl(self.f.load_schema(inputs))
         self.m.dml(self.f.populate(inputs))
+        actual = self.m.dql(self.f.test(inputs))
         self.assertEqual(Decimal(self.f.expected(inputs)),
-                         self.m.dql(self.f.test(inputs)))
+                         actual[0][0])
 
     def test_18_float_precision(self):
         inputs = 'float_precision'
         self.m.ddl(self.f.load_schema(inputs))
         self.m.dml(self.f.populate(inputs))
+        actual = self.m.dql(self.f.test(inputs))
         self.assertEqual(float(self.f.expected(inputs)),
-                         self.m.dql(self.f.test(inputs)))
+                         actual[0][0])
 
     def test_19_date_min(self):
         """
@@ -154,8 +171,10 @@ class TestMySQLDataType(TestCase):
         inputs = 'date_min'
         self.m.ddl(self.f.load_schema(inputs))
         self.m.dml(self.f.populate(inputs))
-        self.assertEqual(self.f.expected(inputs),
-                         str(self.m.dql(self.f.test(inputs))))
+        actual = self.m.dql(self.f.test(inputs))
+        (y, m, d) = self.f.expected(inputs).split('-')
+        expected = date(year=int(y), month=int(m), day=int(d))
+        self.assertEqual(expected, actual[0][0])
 
     def test_20_date_max(self):
         """
@@ -165,8 +184,10 @@ class TestMySQLDataType(TestCase):
         inputs = 'date_max'
         self.m.ddl(self.f.load_schema(inputs))
         self.m.dml(self.f.populate(inputs))
-        self.assertEqual(self.f.expected(inputs),
-                         str(self.m.dql(self.f.test(inputs))))
+        actual = self.m.dql(self.f.test(inputs))
+        (y, m, d) = self.f.expected(inputs).split('-')
+        expected = date(year=int(y), month=int(m), day=int(d))
+        self.assertEqual(expected, actual[0][0])
 
     def test_21_time_min(self):
         """
@@ -176,8 +197,10 @@ class TestMySQLDataType(TestCase):
         inputs = 'time_min'
         self.m.ddl(self.f.load_schema(inputs))
         self.m.dml(self.f.populate(inputs))
-        self.assertEqual(self.f.expected(inputs),
-                         str(self.m.dql(self.f.test(inputs))))
+        actual = self.m.dql(self.f.test(inputs))
+        (h, m, s) = self.f.expected(inputs).split(':')
+        expected = timedelta(hours=int(h)) + timedelta(minutes=int(m)) + timedelta(seconds=int(s))
+        self.assertEqual(expected, actual[0][0])
 
     def test_22_time_max(self):
         """
@@ -187,8 +210,10 @@ class TestMySQLDataType(TestCase):
         inputs = 'time_max'
         self.m.ddl(self.f.load_schema(inputs))
         self.m.dml(self.f.populate(inputs))
-        self.assertEqual(self.f.expected(inputs),
-                         str(self.m.dql(self.f.test(inputs))))
+        actual = self.m.dql(self.f.test(inputs))
+        (h, m, s) = self.f.expected(inputs).split(':')
+        expected = timedelta(hours=int(h)) + timedelta(minutes=int(m)) + timedelta(seconds=int(s))
+        self.assertEqual(expected, actual[0][0])
 
     def test_23_datetime_min(self):
         """
@@ -198,8 +223,9 @@ class TestMySQLDataType(TestCase):
         inputs = 'datetime_min'
         self.m.ddl(self.f.load_schema(inputs))
         self.m.dml(self.f.populate(inputs))
-        self.assertEqual(self.f.expected(inputs),
-                         str(self.m.dql(self.f.test(inputs))))
+        actual = self.m.dql(self.f.test(inputs))
+        expected = datetime.strptime(self.f.expected(inputs), '%Y-%m-%d %H:%M:%S')
+        self.assertEqual(expected, actual[0][0])
 
     def test_24_datetime_max(self):
         """
@@ -209,8 +235,9 @@ class TestMySQLDataType(TestCase):
         inputs = 'datetime_max'
         self.m.ddl(self.f.load_schema(inputs))
         self.m.dml(self.f.populate(inputs))
-        self.assertEqual(self.f.expected(inputs),
-                         str(self.m.dql(self.f.test(inputs))))
+        actual = self.m.dql(self.f.test(inputs))
+        expected = datetime.strptime(self.f.expected(inputs), '%Y-%m-%d %H:%M:%S')
+        self.assertEqual(expected, actual[0][0])
 
     def test_25_timestamp_min(self):
         """
@@ -220,8 +247,9 @@ class TestMySQLDataType(TestCase):
         inputs = 'timestamp_min'
         self.m.ddl(self.f.load_schema(inputs))
         self.m.dml(self.f.populate(inputs))
-        self.assertEqual(self.f.expected(inputs),
-                         str(self.m.dql(self.f.test(inputs))))
+        actual = self.m.dql(self.f.test(inputs))
+        expected = datetime.strptime(self.f.expected(inputs), '%Y-%m-%d %H:%M:%S')
+        self.assertEqual(expected, actual[0][0])
 
     def test_26_timestamp_max(self):
         """
@@ -231,61 +259,70 @@ class TestMySQLDataType(TestCase):
         inputs = 'timestamp_max'
         self.m.ddl(self.f.load_schema(inputs))
         self.m.dml(self.f.populate(inputs))
-        self.assertEqual(self.f.expected(inputs),
-                         str(self.m.dql(self.f.test(inputs))))
+        actual = self.m.dql(self.f.test(inputs))
+        expected = datetime.strptime(self.f.expected(inputs), '%Y-%m-%d %H:%M:%S')
+        self.assertEqual(expected, actual[0][0])
 
     def test_27_char_min(self):
         inputs = 'char_min'
         self.m.ddl(self.f.load_schema(inputs))
         self.m.dml(self.f.populate(inputs))
+        actual = self.m.dql(self.f.test(inputs))
         self.assertEqual(self.f.expected(inputs),
-                         self.m.dql(self.f.test(inputs)))
+                         actual[0][0])
 
     def test_28_char_max(self):
         inputs = 'char_max'
         self.m.ddl(self.f.load_schema(inputs))
         self.m.dml(self.f.populate(inputs))
+        actual = self.m.dql(self.f.test(inputs))
         self.assertEqual(self.f.expected(inputs),
-                         self.m.dql(self.f.test(inputs)))
+                         actual[0][0])
 
     def test_29_char_trailing_spaces(self):
         inputs = 'char_trailing_spaces'
         self.m.ddl(self.f.load_schema(inputs))
         self.m.dml(self.f.populate(inputs))
+        actual = self.m.dql(self.f.test(inputs))
         self.assertEqual(self.f.expected(inputs),
-                         self.m.dql(self.f.test(inputs)))
+                         actual[0][0])
 
     def test_30_varchar_min(self):
         inputs = 'varchar_min'
         self.m.ddl(self.f.load_schema(inputs))
         self.m.dml(self.f.populate(inputs))
+        actual = self.m.dql(self.f.test(inputs))
         self.assertEqual(self.f.expected(inputs),
-                         self.m.dql(self.f.test(inputs)))
+                         actual[0][0])
 
     def test_31_varchar_max(self):
         inputs = 'varchar_max'
         self.m.ddl(self.f.load_schema(inputs))
         self.m.dml(self.f.populate(inputs))
+        actual = self.m.dql(self.f.test(inputs))
         self.assertEqual(''.join(self.f.expected(inputs)),
-                         self.m.dql(self.f.test(inputs)))
+                         actual[0][0])
 
     def test_32_text_min(self):
         inputs = 'text_min'
         self.m.ddl(self.f.load_schema(inputs))
         self.m.dml(self.f.populate(inputs))
+        actual = self.m.dql(self.f.test(inputs))
         self.assertEqual(''.join(self.f.expected(inputs)),
-                         self.m.dql(self.f.test(inputs)))
+                         actual[0][0])
 
     def test_33_text_max(self):
         inputs = 'text_max'
         self.m.ddl(self.f.load_schema(inputs))
         self.m.dml(self.f.populate(inputs))
+        actual = self.m.dql(self.f.test(inputs))
         self.assertEqual(''.join(self.f.expected(inputs)),
-                         self.m.dql(self.f.test(inputs)))
+                         actual[0][0])
 
     def test_34_enum(self):
         inputs = 'enum'
         self.m.ddl(self.f.load_schema(inputs))
         self.m.dml(self.f.populate(inputs))
+        actual = self.m.dql(self.f.test(inputs))
         self.assertEqual(''.join(self.f.expected(inputs)),
-                         self.m.dql(self.f.test(inputs)))
+                         actual[0][0])

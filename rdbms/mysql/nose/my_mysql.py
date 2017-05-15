@@ -77,7 +77,9 @@ class MyMySQL(object):
                     records.append(record)
                 return records
             else:
-                return result.fetch_row(maxrows=1)[0][0]
+                x = result.fetch_row(maxrows=1)
+                return x
+                #return result.fetch_row(maxrows=1)[0][0]
 
     def ddl(self, stmt):
         return self._exec(stmt, 'ddl')

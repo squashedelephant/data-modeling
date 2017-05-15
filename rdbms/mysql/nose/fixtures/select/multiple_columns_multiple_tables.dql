@@ -1,0 +1,1 @@
+SELECT a.first_name, a.last_name, t.name, ah.amount FROM account a INNER JOIN account_history ah INNER JOIN transaction t ON t.id = ah.xact_id AND a.id = ah.acct_id AND ah.xact_id=2;

@@ -1,0 +1,9 @@
+# interview-clustrix
+MySQL Access Test Cases using Python PyUnit
+
+References
+1) https://www.w3schools.com/sql/default.asp
+2) https://dev.mysql.com/doc/
+   https://dev.mysql.com/doc/refman/5.7/en/
+3) https://dev.mysql.com/doc/refman/5.7/en/date-and-time-functions.html#function_current-timestamp
+   https://docs.python.org/2/library/datetime.html

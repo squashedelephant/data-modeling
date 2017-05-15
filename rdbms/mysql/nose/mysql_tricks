@@ -1,0 +1,7 @@
+SET foreign_key_checks = 0
+... MASS INSERT of sanitized data
+SET foreign_key_checks = 1
+
+SET @person_id = LAST_INSERT_ID() after any INSERT for re-use in FK/PK situations
+
+SET max_sort_length = n before SELECT rows with ORDER BY because default, 1024, may be needlessly large

@@ -1,0 +1,11 @@
+INSERT INTO transaction(name) VALUES('direct deposit');
+INSERT INTO transaction(name) VALUES('atm deposit');
+INSERT INTO transaction(name) VALUES('wire transfer');
+INSERT INTO transaction(name) VALUES('atm withdrawal');
+INSERT INTO transaction(name) VALUES('teller withdrawal');
+INSERT INTO account(first_name, last_name, code) VALUES('John', 'Doe', 1111);
+SET @acct_id = LAST_INSERT_ID();
+SET @xact_id = (SELECT id FROM transaction WHERE name='atm deposit');
+INSERT INTO account_history SET acct_id=@acct_id, xact_id=@xact_id, transaction_date=CURRENT_DATE(), transaction_time=CURRENT_TIME(), amount=100.00;
+SET @xact_id = (SELECT id FROM transaction WHERE name='atm withdrawal');
+INSERT INTO account_history SET acct_id=@acct_id, xact_id=@xact_id, transaction_date=CURRENT_DATE(), transaction_time=CURRENT_TIME(), amount=40.00;

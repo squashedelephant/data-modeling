@@ -1,0 +1,1 @@
+SELECT first_name FROM account WHERE first_name IN ('John', 'Jane', 'Peter', 'Christine');
