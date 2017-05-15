@@ -1,0 +1,5 @@
+INSERT INTO data(quantity) VALUES(53);
+INSERT INTO data(quantity) VALUES(99);
+INSERT INTO data(quantity) VALUES(17);
+INSERT INTO data(quantity) VALUES(31);
+INSERT INTO data(quantity) VALUES(47);

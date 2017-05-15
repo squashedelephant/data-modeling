@@ -1,0 +1,1 @@
+INSERT INTO data(make, model, year) VALUES ('BMW', '325ci', 2017), ('Toyota', 'Prius', 2016), ('Mazda', 'Miata', 2015);

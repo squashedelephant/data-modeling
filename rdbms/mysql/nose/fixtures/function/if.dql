@@ -1,0 +1,1 @@
+SELECT IF ((SELECT COUNT(*) > 5 FROM data), 'yes', 'no');

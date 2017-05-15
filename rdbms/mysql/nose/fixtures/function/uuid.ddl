@@ -1,0 +1,1 @@
+CREATE TABLE data(id BINARY(16), name VARCHAR(30), PRIMARY KEY (id));

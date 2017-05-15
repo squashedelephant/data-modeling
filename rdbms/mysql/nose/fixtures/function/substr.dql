@@ -1,0 +1,1 @@
+SELECT SUBSTR((SELECT word FROM data WHERE word LIKE 're%'), 5);

@@ -1,0 +1,1 @@
+SELECT TRIM(word) FROM data;

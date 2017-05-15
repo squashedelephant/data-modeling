@@ -1,0 +1,2 @@
+SET @word = 'special';
+INSERT INTO data(word, hash) VALUES(@word, MD5(@word));

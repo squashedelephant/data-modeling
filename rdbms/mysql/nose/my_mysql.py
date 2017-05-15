@@ -68,6 +68,8 @@ class MyMySQL(object):
             return
         elif cmd == 'dql':
             result = self.db.store_result()
+            if not hasattr(result, 'num_rows'):
+                return
             rows = result.num_rows()
             if rows > 1:
                 while True:
@@ -77,9 +79,7 @@ class MyMySQL(object):
                     records.append(record)
                 return records
             else:
-                x = result.fetch_row(maxrows=1)
-                return x
-                #return result.fetch_row(maxrows=1)[0][0]
+                return result.fetch_row(maxrows=1)
 
     def ddl(self, stmt):
         return self._exec(stmt, 'ddl')

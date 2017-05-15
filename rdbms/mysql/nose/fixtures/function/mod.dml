@@ -1,0 +1,4 @@
+INSERT INTO data(quantity) VALUES(53);
+INSERT INTO data(quantity) VALUES(99);
+SET @num = (SELECT quantity FROM data WHERE id = 1);
+SET @denum = (SELECT quantity FROM data WHERE id = 2);
