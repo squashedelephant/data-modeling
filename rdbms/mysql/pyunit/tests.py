@@ -31,5 +31,5 @@ def my_suite():
     return suite
 
 if __name__ == '__main__':
-    runner = TextTestRunner()
+    runner = TextTestRunner(verbosity=2)
     runner.run(my_suite())

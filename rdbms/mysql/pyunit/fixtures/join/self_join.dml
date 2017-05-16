@@ -1,0 +1,4 @@
+INSERT INTO customer(name, business, city, state, credit_limit) VALUES ('Bodacious Beauty Parlor', 'beauty salon', 'Smallville', 'KS', 2000.00), ('Refreshing Cuisine', 'restaurant', 'Big City', 'MO', 5000.00);
+INSERT INTO customer(name, business, city, state, credit_limit) VALUES ('Gas & Go', 'gas station', 'Smallville', 'KS', 3000.00), ('Family Pharmacy', 'pharmacy', 'Big City', 'MO', 5000.00);
+INSERT INTO customer(name, business, city, state, credit_limit) VALUES ('Chill & Slurp', 'coffee shop', 'Smallville', 'KS', 1000.00), ('Hang in There', 'hospital', 'Metropolis', 'AR', 50000.00);
+INSERT INTO customer(name, business, city, state, credit_limit) VALUES ('Keep the Faith', 'church', 'Big City', 'MO', 5000.00), ('Buy & Ride', 'auto dealership', 'Metropolis', 'AR', 50000.00), ('Lock & Key', 'bank', 'Big City', 'MO', 200000);

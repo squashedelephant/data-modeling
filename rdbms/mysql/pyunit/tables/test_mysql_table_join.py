@@ -97,6 +97,13 @@ class TestMySQLTableJoin(TestCase):
         self.assertEqual(None, actual_rows[2][0][1]);
         self.assertEqual(None, actual_rows[2][0][2]);
 
-    def ttest_05_self_join(self):
-        pass
-
+    def test_05_self_join(self):
+        inputs = 'self_join'
+        self.m.ddl(self.f.load_schema(inputs))
+        for stmt in self.f.populate(inputs):
+            self.m.dml(stmt)
+        actual_rows = self.m.dql(self.f.test(inputs))
+        expected_rows = self.f.expected(inputs)
+        for i in range(len(actual_rows)):
+            self.assertEqual(expected_rows[i*2+0], actual_rows[i][0][0])
+            self.assertEqual(expected_rows[i*2+1], actual_rows[i][0][1])

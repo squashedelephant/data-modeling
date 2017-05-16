@@ -1,0 +1,1 @@
+SELECT DISTINCT c1.name, c1.city FROM customer AS c1 INNER JOIN customer AS c2 ON c1.city=c2.city ORDER BY c1.city ASC, c1.name ASC;
