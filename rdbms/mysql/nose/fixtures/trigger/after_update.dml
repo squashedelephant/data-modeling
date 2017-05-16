@@ -1,0 +1,2 @@
+INSERT INTO account(name, amount) VALUES ('Jane', 40.00);
+UPDATE account SET name='Jane', amount=80.00;

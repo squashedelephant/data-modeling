@@ -1,0 +1,4 @@
+DROP TABLE IF EXISTS profile;
+DROP TABLE IF EXISTS user;
+DROP TABLE IF EXISTS purchase_order;
+DROP TABLE IF EXISTS customer;

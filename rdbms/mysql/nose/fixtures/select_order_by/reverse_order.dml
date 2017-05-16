@@ -1,0 +1,1 @@
+INSERT INTO data(name) VALUES ('Alpha'), ('Beta'), ('Gamma'), ('Delta'), ('Epsilon');

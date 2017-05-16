@@ -1,0 +1,4 @@
+INSERT INTO account(name, amount) VALUES ('John', 100.00);
+INSERT INTO account(name, amount) VALUES ('John', 80.00);
+INSERT INTO account(name, amount) VALUES ('John', -20.00);
+DELETE FROM account WHERE name = 'John';

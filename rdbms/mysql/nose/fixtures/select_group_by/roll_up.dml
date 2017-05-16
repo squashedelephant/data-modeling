@@ -1,0 +1,12 @@
+INSERT INTO forecast(year, division, quarter, sales) VALUES(2017, 'US East', 'q1', 60000.00);
+INSERT INTO forecast(year, division, quarter, sales) VALUES(2017, 'US East', 'q2', 70000.00);
+INSERT INTO forecast(year, division, quarter, sales) VALUES(2017, 'US East', 'q3', 70000.00);
+INSERT INTO forecast(year, division, quarter, sales) VALUES(2017, 'US East', 'q4', 80000.00);
+INSERT INTO forecast(year, division, quarter, sales) VALUES(2017, 'US Midwest', 'q1', 50000.00);
+INSERT INTO forecast(year, division, quarter, sales) VALUES(2017, 'US Midwest', 'q2', 40000.00);
+INSERT INTO forecast(year, division, quarter, sales) VALUES(2017, 'US Midwest', 'q3', 40000.00);
+INSERT INTO forecast(year, division, quarter, sales) VALUES(2017, 'US Midwest', 'q4', 50000.00);
+INSERT INTO forecast(year, division, quarter, sales) VALUES(2017, 'US West', 'q1', 80000.00);
+INSERT INTO forecast(year, division, quarter, sales) VALUES(2017, 'US West', 'q2', 90000.00);
+INSERT INTO forecast(year, division, quarter, sales) VALUES(2017, 'US West', 'q3', 100000.00);
+INSERT INTO forecast(year, division, quarter, sales) VALUES(2017, 'US West', 'q4', 125000.00);

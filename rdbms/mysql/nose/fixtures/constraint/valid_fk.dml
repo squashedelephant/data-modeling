@@ -1,0 +1,2 @@
+INSERT INTO inventory(name, sku, quantity) VALUES ('sandwich', 1001, 10), ('chips', 1002, 5), ('soda', 1003, 3);
+INSERT INTO client_order(inv_id, quantity, price) VALUES ((SELECT id FROM inventory WHERE name = 'sandwich'), 1, 6.95);

@@ -1,0 +1,1 @@
+SELECT u.name, p.password, p.email FROM user AS u INNER JOIN profile as p ON u.id = p.user_id;
