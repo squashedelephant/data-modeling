@@ -1,0 +1,23 @@
+
+$ source ~/play/bin/activate
+(play) $ cd ~/Projects/data_modeling/mysql
+(play) $ django-admin startproject django_model
+(play) $ vi django_model/settings.py
+(play) $ export DJANGO_SETTINGS_MODULE=django_model.settings
+(play) $ export PYTHONPATH=.:${PYTHONPATH}
+(play) $ python manage.py check
+(play) $ python manage.py makemigrations
+(play) $ python manage.py migrate
+
+(play) $ python manage.py startapp mysql
+(play) $ vi django_model/settings.py
+(play) $ vi django_model/urls.py
+(play) $ vi mysql/urls.py
+(play) $ vi mysql/models.py
+(play) $ vi mysql/admin.py
+(play) $ vi mysql/forms.py
+(play) $ vi mysql/views.py
+(play) $ vi mysql/tests.py
+(play) $ python manage.py check
+(play) $ python manage.py makemigrations
+(play) $ python manage.py migrate
