@@ -1,0 +1,1 @@
+INSERT INTO data(id, name) VALUES(unhex(replace(UUID(),'-','')), 'Battlestar Galactica'); 

@@ -1,0 +1,4 @@
+INSERT INTO user(name) VALUES('Bill Gates'), ('Steve Jobs'), ('Larry Ellison');
+INSERT INTO profile SET user_id = (SELECT id FROM user WHERE name = 'Bill Gates'), password = 'Microsoft', email = 'bill_gates@microsoft.com';
+INSERT INTO profile SET user_id = (SELECT id FROM user WHERE name = 'Steve Jobs'), password = 'Apple', email = 'steve_jobs@apple.com';
+INSERT INTO profile SET user_id = (SELECT id FROM user WHERE name = 'Larry Ellison'), password = 'Oracle', email = 'larry_ellison@oracle.com';

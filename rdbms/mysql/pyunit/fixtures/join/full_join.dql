@@ -1,0 +1,1 @@
+SELECT c.name, po.id, po.shipped FROM customer AS c LEFT JOIN purchase_order AS po ON c.id = po.customer_id UNION SELECT c.name, po.id, po.shipped FROM purchase_order AS po RIGHT JOIN customer AS c ON c.id = po.customer_id;

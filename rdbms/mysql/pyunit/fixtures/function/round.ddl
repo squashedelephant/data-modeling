@@ -1,0 +1,1 @@
+CREATE TABLE data(score DECIMAL(5.2));

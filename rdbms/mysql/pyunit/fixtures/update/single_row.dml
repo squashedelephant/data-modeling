@@ -1,0 +1,2 @@
+INSERT INTO data(name) VALUES ('Alpha'), ('Beta'), ('Gamma'), ('Delta'), ('Epsilon');
+UPDATE data SET name='Omega' WHERE name='Alpha';

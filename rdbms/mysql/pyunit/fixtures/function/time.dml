@@ -1,0 +1,2 @@
+SET @time = CURRENT_TIME();
+INSERT INTO data(start_time) VALUES(TIME(@time));

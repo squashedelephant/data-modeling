@@ -1,0 +1,3 @@
+INSERT INTO data(cost) VALUES(19.99);
+INSERT INTO data(cost) VALUES(24.95);
+INSERT INTO data(cost) VALUES(7.18);

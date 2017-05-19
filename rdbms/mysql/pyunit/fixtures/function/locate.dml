@@ -1,0 +1,5 @@
+INSERT INTO data(word) VALUES('special');
+INSERT INTO data(word) VALUES('reference');
+INSERT INTO data(word) VALUES('whiskey');
+INSERT INTO data(word) VALUES('hunger');
+INSERT INTO data(word) VALUES('friend');

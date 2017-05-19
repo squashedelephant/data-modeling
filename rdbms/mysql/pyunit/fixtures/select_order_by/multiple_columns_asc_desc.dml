@@ -1,0 +1,1 @@
+INSERT INTO vehicle(year, make, model) VALUES (2017, 'BMW', 'M3'), (2017, 'BMW', '325ci'), (2016, 'Toyota', 'Corolla'), (2016, 'Toyota', 'Prius'), (2017, 'Mazda', 'MX-5'), (2017, 'Mazda', 'Spider');

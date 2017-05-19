@@ -1,0 +1,1 @@
+SELECT amount FROM account_history WHERE xact_id != 2;

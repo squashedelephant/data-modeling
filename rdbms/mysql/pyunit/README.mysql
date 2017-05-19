@@ -1,0 +1,23 @@
+
+Start MySQL from a container
+
+$ source play/bin/activate
+(play) $ cd Project/client-django
+(play) $ ./start.py
+(play) $ docker ps
+CONTAINER ID        IMAGE                               COMMAND                  CREATED             STATUS              PORTS                    NAMES
+41e47b752365        squashedelephant/mysql:develop      "docker-entrypoint.sh"   2 hours ago         Up 2 hours          0.0.0.0:3306->3306/tcp   services_mysql_1
+
+Access MySQL using Python 2.7 module: 
+
+from _mysql import connect
+from _mysql_exceptions import DataError, OperationalError, ProgrammingError
+
+self.m = MyMySQL()
+self.stmt = 'CREATE TABLE data(id TINYINT);'
+self.m.ddl(self.stmt)
+self.stmt = 'INSERT INTO data(id) VALUES(1);'
+self.m.dml(self.stmt)
+self.query = 'SELECT id FROM data;'
+self.assertEqual('1', self.m.dql(self.query))
+

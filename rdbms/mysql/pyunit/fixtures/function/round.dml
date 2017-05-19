@@ -1,0 +1,1 @@
+INSERT INTO data(score) VALUES(1.23);

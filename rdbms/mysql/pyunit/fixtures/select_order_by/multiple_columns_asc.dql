@@ -1,0 +1,1 @@
+SELECT year, make, model FROM vehicle ORDER BY year, make, model ASC;

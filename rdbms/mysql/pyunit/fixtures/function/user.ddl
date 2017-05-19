@@ -1,0 +1,1 @@
+CREATE TABLE data(name VARCHAR(20));

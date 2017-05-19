@@ -1,0 +1,2 @@
+SET @date = CURRENT_DATE();
+INSERT INTO data(created) VALUES(DATE(@date));

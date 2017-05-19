@@ -1,0 +1,1 @@
+SELECT xact_id, amount FROM account_history;

@@ -1,0 +1,1 @@
+SELECT 'hunger' IN (SELECT word FROM data);

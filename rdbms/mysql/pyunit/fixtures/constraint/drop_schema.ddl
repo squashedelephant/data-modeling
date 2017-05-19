@@ -1,0 +1,3 @@
+DROP TABLE IF EXISTS data;
+DROP TABLE IF EXISTS client_order;
+DROP TABLE IF EXISTS inventory;

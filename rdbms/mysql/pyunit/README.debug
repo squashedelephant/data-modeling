@@ -1,0 +1,12 @@
+
+When stuck BREAK GLASS (connect to MySQL container directly)
+
+$ source play/bin/activate
+(play) $ docker-machine env <VM>
+(play) $ eval $(docker-machine env <VM>)
+(play) $ docker ps
+(play) $ cat $HOME/.ssh/my.cnf
+(play) $ docker exec -it services_mysql_1 bash
+root@<hex>/# mysql --user=<username> --password=<password> --database=clustrix
+mysql> <SQL>
+

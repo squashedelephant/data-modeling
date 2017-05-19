@@ -1,0 +1,16 @@
+
+$ source $HOME/play/bin/activate
+(play) $ cd $HOME/Projects/data_modeling/mysql/django_model
+(play) $ python manage.py createsuperuser --username tim
+email? <email>
+password> <password>
+(play) $ docker exec -it services_mysql_1 bash
+# mysql --user=root --password=<password>
+mysql> CREATE DATABASE test_models;
+mysql> GRANT ALL ON test_models.* TO 'tim'@'%';
+mysql> GRANT ALL ON models.* TO 'tim'@'%';
+mysql> exit
+# exit
+(play) $ python manage.py test -v 2
+
+

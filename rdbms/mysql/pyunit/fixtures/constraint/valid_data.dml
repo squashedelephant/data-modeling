@@ -1,0 +1,2 @@
+INSERT INTO data(name, sign) VALUES('John', 'Virgo');
+INSERT INTO data(name, sign) VALUES('', 'Taurus');

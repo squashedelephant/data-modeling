@@ -1,0 +1,1 @@
+SELECT year, division, SUM(sales) AS annual_sales FROM forecast GROUP BY year ASC, division ASC WITH ROLLUP;
